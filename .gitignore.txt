@@ -1,0 +1,8 @@
+# ignore all logs
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/ 
+
+# ignore build output directory
+bin/
