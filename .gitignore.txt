@@ -6,3 +6,6 @@ temp/
 
 # ignore build output directory
 bin/
+
+# ignore psycache
+**/__pycache__/
