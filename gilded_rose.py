@@ -18,6 +18,9 @@ class GildedRose(object):
         # DO NOT CHANGE THIS ATTRIBUTE!!!
         self.items = items
 
+    def get_items_by_name(self, name: str):
+        return self._items.get(name)
+
     def update_quality(self):
         for item in self.items:
             if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert":

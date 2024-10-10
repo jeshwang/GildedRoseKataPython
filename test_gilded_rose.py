@@ -9,7 +9,7 @@ class GildedRoseTest(unittest.TestCase):
         items = [Item("foo", 0, 0)]
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
-        self.assertEquals("fixme", items[0].name)
+        self.assertEqual("foo", items[0].name)
 
     def test_vest_item_should_decrease_after_one_day(self):
         vest = "+5 Dexterity Vest"
@@ -23,14 +23,14 @@ class GildedRoseTest(unittest.TestCase):
         items = [Item(aged_brie, 4, 2)]
         gr = GildedRose(items)
         gr.update_quality()
-        self.assertEquals(2, items[0].quality)
+        self.assertEqual(3, items[0].quality)
 
     def test_sulfuras_should_never_decrease_in_quality(self):
         sulfuras = "Sulfuras, Hand of Ragnaros"
-        items = [Item(sulfuras, 0, 50)]
+        items = [Item(sulfuras, 0, 80)]
         gr = GildedRose(items)
         gr.update_quality()
-        self.assertEquals(49, items[0].quality)
+        self.assertEqual(80, items[0].quality)
 
 if __name__ == '__main__':
     unittest.main()
